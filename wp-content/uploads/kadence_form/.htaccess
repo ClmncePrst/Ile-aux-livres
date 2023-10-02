@@ -1,0 +1,16 @@
+
+# BEGIN Kadence Blocks
+# Les directives (lignes) entre « BEGIN Kadence Blocks » et « END Kadence Blocks » sont générées
+# dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
+# Toute modification des directives situées entre ces marqueurs sera surchargée.
+# Prevent PHP execution in this folder for all files in case server is misconfigured to execute unintended file extensions.
+<Files *>
+SetHandler none
+SetHandler default-handler
+Options -ExecCGI
+RemoveHandler .cgi .php .php3 .php4 .php5 .phtml .pl .py .pyc .pyo
+</Files>
+<IfModule headers_module>
+Header set X-Robots-Tag "noindex"
+</IfModule>
+# END Kadence Blocks
